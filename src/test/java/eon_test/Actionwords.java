@@ -60,7 +60,7 @@ public class Actionwords {
 
 
     public void login() {
-        this.webDriver.get("http://10.10.1.25:91");
+        this.webDriver.get("http://calcon.upsolution.hu");
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(this.webDriver, 45);

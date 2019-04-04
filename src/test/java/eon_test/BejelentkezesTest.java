@@ -12,7 +12,7 @@ public class BejelentkezesTest {
     }
     public void loginDT(String username, String password) {
         // Given go to eon url "http://10.10.1.25:91"
-        actionwords.goToEonUrlUrl("http://10.10.1.25:91");
+        actionwords.goToEonUrlUrl("http://calcon.upsolution.hu");
         // Then enter username "<username>"
         actionwords.enterUsernameUsername(username);
         // And enter password "<password>"
