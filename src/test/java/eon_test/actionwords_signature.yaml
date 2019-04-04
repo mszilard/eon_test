@@ -1,0 +1,28 @@
+---
+- name: enter username "username"
+  uid: 84f9f281-dee5-4689-a984-eb8d669e427c
+  parameters:
+  - name: username
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'enter password "password" '
+  uid: c4d7d813-1ba9-4fb1-9a36-7aeb9fd7b76f
+  parameters:
+  - name: password
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: press login button
+  uid: f9f28561-c930-4c44-a222-3697d2a68814
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: should be logged in
+  uid: 16f1413b-4e4c-4d10-af61-fea1abdd9555
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: go to eon url "url"
+  uid: b4591ca2-64ef-4716-b768-077b05d08217
+  parameters:
+  - name: url
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: shouldn't be logged in
+  uid: 3621b060-952b-4528-a764-f2b46c3ed923
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
