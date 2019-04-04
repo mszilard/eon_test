@@ -90,7 +90,7 @@ public class Actionwords {
         webDriver.findElement(By.cssSelector(".m-portlet__body div.ng-star-inserted div button")).click();
         wait.until(ExpectedConditions.visibilityOf(webDriver.findElement(By.cssSelector("mat-dialog-container"))));
         webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("hipTest");
-        webDriver.findElement(By.cssSelector("mat-dialog-container textarea")).sendKeys("HipTeszt próba");
+        webDriver.findElement(By.cssSelector("mat-dialog-container textarea")).sendKeys("HipTeszt prba");
     }
 
     public void theGroupShouldBeCreated() {
