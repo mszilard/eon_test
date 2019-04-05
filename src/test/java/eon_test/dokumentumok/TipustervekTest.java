@@ -13,7 +13,7 @@ public class TipustervekTest {
     }
 
     @Test
-    public void tipustervLetrehozasa() {
+    public void tipustervLetrehozasaUida1617a3dcf794575916c4fb0fb53a6bc() {
         // Given login
         actionwords.login();
         // Then típustervek menüpont

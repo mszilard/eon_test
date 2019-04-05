@@ -12,7 +12,7 @@ public class SugoTest {
     }
 
     @Test
-    public void newHelpGroup() {
+    public void newHelpGroupUid1de027f4b4ee46108b37276c17c11584() {
         // Given login
         actionwords.login();
         // Then create new group

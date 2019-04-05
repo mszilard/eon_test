@@ -10,9 +10,9 @@ public class BejelentkezesTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void loginDT(String username, String password) {
-        // Given go to eon url "http://10.10.1.25:91"
-        actionwords.goToEonUrlUrl("http://calcon.upsolution.hu");
+    public void loginTest(String username, String password) {
+        // Given go to eon url "https://calcon.upsolution.hu"
+        actionwords.goToEonUrlUrl("https://calcon.upsolution.hu");
         // Then enter username "<username>"
         actionwords.enterUsernameUsername(username);
         // And enter password "<password>"
@@ -24,12 +24,12 @@ public class BejelentkezesTest {
     }
 
     @Test
-    public void loginDTGood() {
-        loginDT("aram_teszt", "aram");
+    public void loginTestGoodUid6a586972667940cfbaf0ca89ce20a19b() {
+        loginTest("aram_teszt", "aram");
     }
 
     @Test
-    public void loginDTBad() {
-        loginDT("asdwfq", "fwq");
+    public void loginTestBadUid1d5263e436e542efac0a9357a2ec2e23() {
+        loginTest("asdwfq", "fwq");
     }
 }

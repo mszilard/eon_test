@@ -26,3 +26,43 @@
   uid: 3621b060-952b-4528-a764-f2b46c3ed923
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: login
+  uid: 2cbb43ce-dcd3-4e2c-ad26-8be413970b79
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: create new group
+  uid: c69c0de5-2c91-413d-9e17-bf4e6fc5d05a
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: save the created group
+  uid: 6fce9349-d0e3-471b-a2d3-fc6c04f7a662
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: define the group content
+  uid: e0693d48-9df6-4e41-87aa-a4d5abb05b9b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the group should be created
+  uid: c63e70fb-5873-4999-937c-1883239af262
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: típustervek menüpont
+  uid: 773e9d1f-93c8-4192-84d1-b007bf702349
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: új típusterv név és szám megadása
+  uid: 8b849978-c064-44fd-8945-465fb961fbf2
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: fájl feltöltése
+  uid: b8ba39f6-2d02-4120-ad54-de7512e6f714
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: típusterv mentése
+  uid: 75f8ef93-dd2b-4a83-8310-214783ea6153
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: típusterv létrejött
+  uid: 8801a9b2-9faa-47f9-a88d-0a1ffdef4156
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

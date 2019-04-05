@@ -53,14 +53,17 @@ public class Actionwords {
 
     }
 
+    public void shouldntBeLoggedIn(){}
+
     public void shouldBeLoggedIn() {
-//        Wait();
-//        Assert.assertTrue(!webDriver.getCurrentUrl().contains("auth"));
+        Assert.assertTrue(!webDriver.getCurrentUrl().contains("auth"));
+        webDriver.close();
+
     }
 
 
     public void login() {
-        this.webDriver.get("http://calcon.upsolution.hu");
+        this.webDriver.get("https://calcon.upsolution.hu");
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(this.webDriver, 45);
@@ -70,24 +73,26 @@ public class Actionwords {
     }
 
     public void createNewGroup() {
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash-screen")));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div m-splash-screen")));
+        this.Wait();
         webDriver.findElement(By.cssSelector("a[href*=sugo]")).click();
         webDriver.findElement(By.cssSelector("div m-subheader a.btn")).click();
         webDriver.findElement(By.cssSelector("div.m-portlet button[type=submit]")).click();
         webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("Hip csoport");
         webDriver.findElement(By.cssSelector("div mat-dialog-container button")).click();
+
     }
 
     public void saveTheCreatedGroup() {
 
-        webDriver.findElement(By.cssSelector(".mat-dialog-actions .btn-primary")).click();
+        webDriver.findElement(By.cssSelector(".mat-dialog-container .btn-primary")).click();
     }
 
     public void defineTheGroupContent() {
 
         List<WebElement> csoportList = webDriver.findElements(By.cssSelector(".csoport"));
         csoportList.get(csoportList.size() - 1).click();
-        webDriver.findElement(By.cssSelector(".m-portlet__body div.ng-star-inserted div button")).click();
+        webDriver.findElement(By.cssSelector(".m-portlet__body div.ng-star-inserted button[type=submit]")).click();
         wait.until(ExpectedConditions.visibilityOf(webDriver.findElement(By.cssSelector("mat-dialog-container"))));
         webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("hipTest");
         webDriver.findElement(By.cssSelector("mat-dialog-container textarea")).sendKeys("HipTeszt prba");
@@ -106,6 +111,7 @@ public class Actionwords {
 
     public void tipustervekMenupont() {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
+        this.Wait();
         this.webDriver.findElement(By.cssSelector(".m-menu__item a[href*=javascript]")).click();
         this.webDriver.findElement(By.cssSelector("li.m-menu__item.ng-star-inserted.m-menu__item--submenu.m-menu__item--open li:nth-of-type(1)")).click();
         this.Wait();
@@ -132,5 +138,6 @@ public class Actionwords {
         if(webDriver.getCurrentUrl().contains("uj")){
             Assert.assertTrue(webDriver.findElement(By.cssSelector("mat-dialog-container")).isDisplayed());
         }
+        webDriver.close();
     }
 }
