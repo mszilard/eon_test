@@ -13,11 +13,11 @@ public class BejelentkezesTest {
     public void loginTest(String username, String password) {
         // Given go to eon url "http://10.10.1.25:91"
         actionwords.goToEonUrlUrl("http://10.10.1.25:91");
-        // Then enter username "<username>"
+        // When enter username "<username>"
         actionwords.enterUsernameUsername(username);
         // And enter password "<password>"
         actionwords.enterPasswordPassword(password);
-        // Then press login button
+        // And press login button
         actionwords.pressLoginButton();
         // Then should be logged in
         actionwords.shouldBeLoggedIn();
