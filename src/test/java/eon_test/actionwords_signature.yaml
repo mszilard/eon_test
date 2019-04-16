@@ -22,10 +22,6 @@
   parameters:
   - name: url
   body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: shouldn't be logged in
-  uid: 3621b060-952b-4528-a764-f2b46c3ed923
-  parameters: []
-  body_hash: d41d8cd98f00b204e9800998ecf8427e
 - name: login
   uid: 2cbb43ce-dcd3-4e2c-ad26-8be413970b79
   parameters: []

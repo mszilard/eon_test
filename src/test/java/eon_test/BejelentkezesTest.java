@@ -11,8 +11,8 @@ public class BejelentkezesTest {
         actionwords = new Actionwords();
     }
     public void loginTest(String username, String password) {
-        // Given go to eon url "https://calcon.upsolution.hu"
-        actionwords.goToEonUrlUrl("https://calcon.upsolution.hu");
+        // Given go to eon url "http://10.10.1.25:91"
+        actionwords.goToEonUrlUrl("http://10.10.1.25:91");
         // Then enter username "<username>"
         actionwords.enterUsernameUsername(username);
         // And enter password "<password>"
@@ -24,12 +24,12 @@ public class BejelentkezesTest {
     }
 
     @Test
-    public void loginTestGoodUid6a586972667940cfbaf0ca89ce20a19b() {
+    public void loginTestGood() {
         loginTest("aram_teszt", "aram");
     }
 
     @Test
-    public void loginTestBadUid1d5263e436e542efac0a9357a2ec2e23() {
+    public void loginTestBad() {
         loginTest("asdwfq", "fwq");
     }
 }

@@ -4,7 +4,7 @@ import org.testng.annotations.*;
 import eon_test.Actionwords;
 
 public class TipustervekTest {
-
+    // Tags: hjhh
     public Actionwords actionwords;
 
     @BeforeMethod
@@ -13,7 +13,7 @@ public class TipustervekTest {
     }
 
     @Test
-    public void tipustervLetrehozasaUida1617a3dcf794575916c4fb0fb53a6bc() {
+    public void tipustervLetrehozasa() {
         // Given login
         actionwords.login();
         // Then típustervek menüpont
