@@ -81,7 +81,7 @@ public class Actionwords {
         webDriver.findElement(By.cssSelector("a[href*=sugo]")).click();
         webDriver.findElement(By.cssSelector("div m-subheader a.btn")).click();
         webDriver.findElement(By.cssSelector("div.m-portlet button[type=submit]")).click();
-        webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("Hip csoport");
+        webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("Hip csoporaaaaat");
         webDriver.findElement(By.cssSelector("div mat-dialog-container button")).click();
 
     }
