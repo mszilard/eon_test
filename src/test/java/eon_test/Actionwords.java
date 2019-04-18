@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,6 +16,7 @@ import  org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 
 
 public class Actionwords {
@@ -30,11 +32,19 @@ public class Actionwords {
     }
 
     public Actionwords() {
-//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-//        webDriver = new FirefoxDriver();
-        System.setProperty("phantomjs.binary.path", "drivers/phantomjs.exe");
-        webDriver = new PhantomJSDriver();
-        webDriver.manage().window().maximize();
+
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+        webDriver = new FirefoxDriver(options);
+
+
+
+
+//        System.setProperty("phantomjs.binary.path", "drivers/phantomjs.exe");
+//        webDriver = new PhantomJSDriver();
+//        webDriver.manage().window().maximize();
+
     }
 
     public void goToEonUrlUrl(String url) {
@@ -169,7 +179,7 @@ public class Actionwords {
     public void clickMegbizoCegekMenupont() {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
         this.Wait();
-        this.webDriver.findElement(By.xpath("a[href*=megbizocegek]")).click();
+        this.webDriver.findElement(By.cssSelector("a[href*=megbizocegek]")).click();
         this.Wait();
     }
 
@@ -178,8 +188,8 @@ public class Actionwords {
     }
 
     public void adatokKitoltese(String d) {
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megbizoRovidNev]")).sendKeys("TST2");
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megbizoTeljesNev]")).sendKeys("Test megbízó cég2");
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megbizoRovidNev]")).sendKeys("TST3");
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megbizoTeljesNev]")).sendKeys("Test megbízó cég3");
         this.webDriver.findElement(By.cssSelector("div.m-portlet mat-select[name=telepules]")).click();
         Wait();
         List<WebElement> telepulesek = webDriver.findElements(By.cssSelector("mat-option"));
@@ -203,47 +213,48 @@ public class Actionwords {
     }
 
     public void ujGepLetrehozasa(String s, String s1) {
-        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-        this.Wait();
-        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) a:nth-child(1) span:nth-child(2)")).click();
-        this.webDriver.findElement(By.cssSelector("li.m-menu__item.ng-star-inserted.m-menu__item--submenu.m-menu__item--open li:nth-of-type(3)")).click();
-        this.Wait();
-        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(s);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(s1);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+//        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
+//        this.Wait();
+//        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) a:nth-child(1) span:nth-child(2)")).click();
+//        this.webDriver.findElement(By.cssSelector("li.m-menu__item.ng-star-inserted.m-menu__item--submenu.m-menu__item--open li:nth-of-type(3)")).click();
+//        this.Wait();
+//        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(s);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(s1);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
 
     }
 
     public void ujHumanEroforrasLetrehozasa(String s, String s1) {
-        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-        this.Wait();
-        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(4) a:nth-child(1) span:nth-child(2)")).click();
-        this.Wait();
-        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(s);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(s1);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+//        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
+//        this.Wait();
+//        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(4) a:nth-child(1) span:nth-child(2)")).click();
+//        this.Wait();
+//        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(s);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(s1);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
     }
 
     public void ujFejezetLetrehozasa(String s, String s1, String tf, String s2, String s3) {
-        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-        this.Wait();
-        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(5) a:nth-child(1) span:nth-child(2)")).click();
-        this.Wait();
-        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=sorszam]")).sendKeys(s);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(s1);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(tf);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(s2);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(s3);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+//        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
+//        this.Wait();
+//        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(5) a:nth-child(1) span:nth-child(2)")).click();
+//        this.Wait();
+//        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=sorszam]")).sendKeys(s);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(s1);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(tf);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(s2);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(s3);
+//        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
 
     }
 
     public void ujDijtetelLetrohazasaAMostLetrehozottAdatokkal(String s, String s1, String s2, String feles_sor, String díjtétel_leírása, String díjtétel_megjegyzése, String db, String s3, String s4) {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-        this.Wait();
+        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        wait = new WebDriverWait(webDriver, 45);
         this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) > a:nth-child(1) > span:nth-child(2)")).click();
         this.Wait();
         this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(2) a:nth-child(1) span:nth-child(2)")).click();

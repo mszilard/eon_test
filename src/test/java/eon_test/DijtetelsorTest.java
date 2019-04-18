@@ -22,7 +22,7 @@ public class DijtetelsorTest {
         // And uj fejezet letrehozasa "88" "Teszt-Fejezet" "TFFF" "1" "2"
         actionwords.ujFejezetLetrehozasa("88", "Teszt-Fejezet", "TFFF", "1", "2");
         // And uj dijtetel letrohazasa a most letrehozott adatokkal "1122334" "88 - TFFF" "Teszt-Dijtétel" "Feles sor" "Díjtétel leírása" "Díjtétel megjegyzése" "db" "Teszt-Gép" "Teszt-Szakember"
-        actionwords.ujDijtetelLetrohazasaAMostLetrehozottAdatokkal("1122334", "88 - TFFF", "Teszt-Dijtétel", "Feles sor", "Díjtétel leírása", "Díjtétel megjegyzése", "db", "Teszt-Gép", "Teszt-Szakember");
+        actionwords.ujDijtetelLetrohazasaAMostLetrehozottAdatokkal("2224334", "88 - TFFF", "Teszt-Dijtétel", "Feles sor", "Díjtétel leírása", "Díjtétel megjegyzése", "db", "Teszt-Gép", "Teszt-Szakember");
         // And dijtetel mentese
         actionwords.dijtetelMentese();
     }

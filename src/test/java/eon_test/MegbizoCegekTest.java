@@ -20,7 +20,7 @@ public class MegbizoCegekTest {
         // Then click uj ceg hozzaadasa gomb
         actionwords.clickUjCegHozzaadasaGomb();
         // And adatok kitoltese ""
-        actionwords.adatokKitoltese("d");
+        actionwords.adatokKitoltese("");
         // And mentes
         actionwords.mentes();
     }
