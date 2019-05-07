@@ -38,13 +38,6 @@ public class Actionwords {
         System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
         webDriver = new FirefoxDriver(options);
 
-
-
-
-//        System.setProperty("phantomjs.binary.path", "drivers/phantomjs.exe");
-//        webDriver = new PhantomJSDriver();
-//        webDriver.manage().window().maximize();
-
     }
 
     public void goToEonUrlUrl(String url) {
@@ -91,7 +84,7 @@ public class Actionwords {
         webDriver.findElement(By.cssSelector("a[href*=sugo]")).click();
         webDriver.findElement(By.cssSelector("div m-subheader a.btn")).click();
         webDriver.findElement(By.cssSelector("div.m-portlet button[type=submit]")).click();
-        webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("Hip csoporaaaaat");
+        webDriver.findElement(By.cssSelector("mat-dialog-container input")).sendKeys("Hip csopotttraaaaat");
         webDriver.findElement(By.cssSelector("div mat-dialog-container button")).click();
 
     }
@@ -114,9 +107,7 @@ public class Actionwords {
     public void theGroupShouldBeCreated() {
         List<WebElement> csoportList = webDriver.findElements(By.cssSelector(".csoport"));
         csoportList.get(csoportList.size() - 1);
-        Assert.assertEquals(csoportList.get(csoportList.size() - 1).getText(), "Hip csoport\n" +
-                "edit\n" +
-                "delete");
+        Assert.assertEquals(csoportList.get(csoportList.size() - 1).getText(), "Hip csoport\n" + "edit\n" + "delete");
         webDriver.close();
 
 
